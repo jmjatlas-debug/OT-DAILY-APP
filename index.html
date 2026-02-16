@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily App</title>
+    <title>OT Daily Note Builder</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #note-area { margin: 20px; }
+        button { padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Daily App!</h1>
-    <p>Content goes here...</p>
+    <div id="note-area">
+        <h1>OT Daily Note Builder</h1>
+        <textarea id="notes" rows="10" cols="30" placeholder="Type your notes here..."></textarea><br/>
+        <button id="save-btn">Save Notes</button>
+    </div>
+    <script>
+        document.getElementById('save-btn').addEventListener('click', function() {
+            const notes = document.getElementById('notes').value;
+            alert('Notes saved!'); // Here you would add functionality to save notes to your server or database
+        });
+    </script>
 </body>
 </html>
